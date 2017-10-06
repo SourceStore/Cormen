@@ -5,6 +5,7 @@
 # include <string.h>
 # include <iostream>
 # include <limits>
+# include <vector>
 
 using namespace std;
 
@@ -25,6 +26,7 @@ class BinaryTree
 		t_binaryTree	*head;
 	public:
 		BinaryTree();
+		BinaryTree(double head_data);
 		~BinaryTree();
 
 		void	addNode(double data);

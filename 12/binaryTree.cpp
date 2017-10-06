@@ -16,6 +16,15 @@ BinaryTree::BinaryTree()
 	head->right->parent = head;
 }
 
+BinaryTree::BinaryTree(double head_data)
+{
+	head = new t_binaryTree;
+	head->data = head_data;
+	head->parent = NULL;
+	head->left = NULL;
+	head->right = NULL;
+}
+
 BinaryTree::~BinaryTree()
 {
 
@@ -68,14 +77,4 @@ void	BinaryTree::tryPrint(t_binaryTree *node)
 t_binaryTree	*BinaryTree::getHead(BinaryTree &bt)
 {
 	return (bt.head);
-}
-
-int	main() {
-
-	BinaryTree bt;
-	//bt.printHead();
-	bt.addNode(1000);
-	//bt.kostil();
-	bt.tryPrint(bt.getHead(bt));
-	return (0);
 }
